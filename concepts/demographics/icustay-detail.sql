@@ -106,4 +106,5 @@ INNER JOIN admissions adm
     ON ie.hadm_id = adm.hadm_id
 INNER JOIN patients pat
     ON ie.subject_id = pat.subject_id
+WHERE adm.has_chartevents_data = 1
 ORDER BY ie.subject_id, adm.admittime, ie.intime;
